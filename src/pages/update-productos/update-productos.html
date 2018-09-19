@@ -1,0 +1,74 @@
+<!--
+  Generated template for the UpdateProductosPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+      <ion-buttons left>
+          <button ion-button icon-only menuToggle="left">
+            <ion-icon name="menu"></ion-icon>
+          </button>
+        </ion-buttons>
+    <ion-title>update-productos</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-list>
+        <ion-item>
+          <ion-label stacked><h1>Código de Producto</h1></ion-label>
+          <ion-input type="text" name="Producto_Codigo" [(ngModel)]="productos.Producto_Codigo"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked><h1>Nombre del Producto</h1></ion-label>
+          <ion-input type="text" name="Producto_Nombre" [(ngModel)]="productos.Producto_Nombre"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label stacked><h1>Costo del Producto</h1></ion-label>
+            <ion-input type="number" step=".01" name="Producto_Costo" [(ngModel)]="productos.Producto_Costo"></ion-input>
+          </ion-item>
+
+          <ion-item>
+              <ion-label stacked><h1>Precio del Producto</h1></ion-label>
+              <ion-input type="number" step=".01" name="Producto_Precio" [(ngModel)]="productos.Producto_Precio"></ion-input>
+            </ion-item>
+
+            
+
+              <ion-item>
+                  <ion-label stacked><h1>Proveedor</h1></ion-label>
+                  <ion-select [(ngModel)]="productos.Producto_Proveedor">
+                    <ion-option *ngFor="let proveedor of proveedores"  value="{{proveedor.Proveedor_Id}}"> {{proveedor.Proveedor_Nombre}}</ion-option>
+                  </ion-select>
+              </ion-item>
+
+              <ion-item>
+                  <ion-label stacked><h1>Caducidad del Producto</h1></ion-label>
+                  <ion-input type="date" name="Producto_Caducidad" [(ngModel)]="productos.Producto_Caducidad"></ion-input>
+              </ion-item>
+
+              <ion-item>
+                  <ion-label stacked><h1>Tipo Producto</h1></ion-label>
+                  <ion-select [(ngModel)]="productos.Producto_TipoProducto">
+                    <ion-option *ngFor="let tipoproducto of tipoproductos"  value="{{tipoproducto.TipoProducto_Id}}"> {{tipoproducto.TipoProducto_Descripcion}}</ion-option>
+                  </ion-select>
+              </ion-item>
+              
+              <ion-item>
+                  <ion-label stacked><h1>Marcas</h1></ion-label>
+                  <ion-select [(ngModel)]="productos.Producto_Marca">
+                    <ion-option *ngFor="let marca of marcas"  value="{{marca.Marcas_Id}}"> {{marca.Marca_Descripcion}}</ion-option>
+                  </ion-select>
+              </ion-item>
+          
+          <button ion-button block (click)="updateProducto()" color="primary">Crear Producto</button>
+      </ion-list>
+
+</ion-content>

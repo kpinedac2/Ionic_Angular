@@ -1,0 +1,35 @@
+<!--
+  Generated template for the ProductoDetallePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+      <ion-buttons left>
+          <button ion-button icon-only menuToggle="left">
+            <ion-icon name="menu"></ion-icon>
+          </button>
+        </ion-buttons>
+    <ion-title>producto-detalle</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-content>
+    <ion-list inset>
+        <ion-item *ngFor="let producto of productos">
+          <h2><b>Id:</b> {{producto.Producto_Id}}</h2>
+          <h2><b>Nombre del Producto:</b> {{producto.Producto_Nombre}}</h2>
+          <h2><b>Costo del Producto:</b> {{producto.Producto_Costo}}</h2>
+          <h2><b>Precio del Producto:</b> {{producto.Producto_Precio}}</h2>
+
+          <button ion-button full color="secondary" (click)="sendProductos(producto)">Actualizar Info</button>
+          <button ion-button full color="primary" (click)="updateExistencia(producto)">Actualizar Existencia</button>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+</ion-content>

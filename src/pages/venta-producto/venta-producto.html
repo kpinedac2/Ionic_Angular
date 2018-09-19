@@ -1,0 +1,86 @@
+<!--
+  Generated template for the VentaProductoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+      <ion-buttons left>
+          <button ion-button icon-only menuToggle="left">
+            <ion-icon name="menu"></ion-icon>
+          </button>
+        </ion-buttons>
+    <ion-title>venta-producto</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<!--
+venta = {
+  Ventas_Fecha: Date.now(),
+  Ventas_Usuario: 1,
+  Ventas_Cliente: 0,
+  Ventas_Total: 0
+}
+-->
+
+<ion-content padding>
+  <h1>Venta</h1>
+  <ion-list>
+        <ion-item>
+            <ion-label stacked>Fecha:</ion-label>
+            <ion-input type="date" name="Ventas_Fecha" [(ngModel)]="venta.Ventas_Fecha"></ion-input>
+          </ion-item>
+      
+          <ion-item>
+            <ion-label stacked>Usuario</ion-label>
+            <ion-select [(ngModel)]="venta.Ventas_Usuario">
+              <ion-option *ngFor="let usuario of usuarios"  value="{{usuario.Usuario_Id}}"> {{usuario.Usuario_Nombre}}</ion-option>
+            </ion-select>
+          </ion-item>
+      
+          <ion-item>
+            <ion-label stacked>Cliente</ion-label>
+            <ion-select [(ngModel)]="venta.Ventas_Cliente">
+              <ion-option *ngFor="let cliente of clientes"  value="{{cliente.Cliente_Id}}"> {{cliente.Cliente_Nombre1}} {{cliente.Cliente_Apellido1}}</ion-option>
+            </ion-select>
+          </ion-item>
+          <button ion-button block (click)="setVentaDatos()" color="primary">Setear Información de Venta</button>
+
+          <br>
+          <br>
+          <br>
+          <hr>
+
+          <ion-item>
+              <ion-label stacked>Producto</ion-label>
+              <ion-select [(ngModel)]="venta_detalle.VentaDetalle_Producto">
+                <ion-option *ngFor="let producto of productos"  value="{{producto.Producto_Id}}"> {{producto.Producto_Nombre}}</ion-option>
+              </ion-select>
+          </ion-item>
+
+            <ion-item>
+              <ion-label stacked>Cantidad:</ion-label>
+              <ion-input type="number" name="VentaDetalle_Cantidad" [(ngModel)]="venta_detalle.VentaDetalle_Cantidad"></ion-input>
+            </ion-item>
+
+            <button ion-button block (click)="saveVentaDetalle()" color="primary">Añadir Producto</button>
+          <h2>Productos en Lista</h2>
+          <ion-list inset>
+              <ion-item *ngFor="let ventade of ventas_detalle">
+                <h2><b>Id:</b> {{ventade.VentaDetalle_Id }}</h2>
+                <h2><b>Cantidad:</b> {{ventade.VentaDetalle_Cantidad }}</h2>
+                <h2><b>Subtotal:</b> {{ventade.VentaDetalle_SubTotal }}</h2>
+                <button (click)="sendUsuario(usuario)">Eliminar</button>
+              </ion-item>
+            </ion-list>
+
+            <button ion-button block (click)="getTotal()" color="primary">Procesar Total</button>
+    
+      
+      
+      
+  </ion-list>
+</ion-content>

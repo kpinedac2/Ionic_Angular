@@ -1,0 +1,84 @@
+<!--
+  Generated template for the UpdateClientesPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+        <ion-buttons left>
+                <button ion-button icon-only menuToggle="left">
+                  <ion-icon name="menu"></ion-icon>
+                </button>
+              </ion-buttons>
+    <ion-title>update-clientes</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+        <h1>Formulario de Actualización de Cliente</h1>
+  <ion-list>
+    <ion-item>
+      <ion-label stacked><h1>Cliente Nombre1</h1></ion-label>
+      <ion-input type="text" name="Cliente_Nombre1" [(ngModel)]="clientes.Cliente_Nombre1"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label stacked><h1>Cliente Nombre2</h1></ion-label>
+        <ion-input type="text" name="Cliente_Nombre2" [(ngModel)]="clientes.Cliente_Nombre2"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label stacked><h1>Cliente Nombre3</h1></ion-label>
+        <ion-input type="text" name="Cliente_Nombre3" [(ngModel)]="clientes.Cliente_Nombre3"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label stacked><h1>Cliente Apellido1</h1></ion-label>
+        <ion-input type="text" name="Cliente_Apellido1" [(ngModel)]="clientes.Cliente_Apellido1"></ion-input>
+      </ion-item>
+
+      <ion-item>
+          <ion-label stacked><h1>Cliente Apellido2</h1></ion-label>
+          <ion-input type="text" name="Cliente_Apellido2" [(ngModel)]="clientes.Cliente_Apellido2"></ion-input>
+      </ion-item>
+
+      <ion-item>
+          <ion-label stacked><h1>Cliente Apellido3</h1></ion-label>
+          <ion-input type="text" name="Cliente_Apellido3" [(ngModel)]="clientes.Cliente_Apellido3"></ion-input>
+      </ion-item>
+
+      <ion-item>
+          <ion-label stacked><h1>Cliente Nacimiento</h1></ion-label>
+          <ion-input type="date" name="Cliente_Nacimiento" [(ngModel)]="clientes.Cliente_Nacimiento"></ion-input>
+      </ion-item>
+
+      <ion-item>
+          <ion-label stacked><h1>Cliente Dirección</h1></ion-label>
+          <ion-input type="text" name="Cliente_Direccion" [(ngModel)]="clientes.Cliente_Direccion"></ion-input>
+      </ion-item>
+
+      <ion-item>
+          <ion-label stacked><h1>Cliente Telefono:</h1></ion-label>
+          <ion-input type="text" name="Cliente_Telefono" [(ngModel)]="clientes.Cliente_Telefono"></ion-input>
+      </ion-item>
+
+      <ion-item>
+          <ion-label stacked><h1>Cliente Nit:</h1></ion-label>
+          <ion-input type="text" name="Cliente_Nit" [(ngModel)]="clientes.Cliente_Nit"></ion-input>
+      </ion-item>
+
+      <ion-item>
+          <ion-label><h1>Genero</h1></ion-label>
+          <ion-select [(ngModel)]="clientes.Cliente_Genero">
+            <ion-option value="F">Femenino</ion-option>
+            <ion-option value="M">Masculino</ion-option>
+          </ion-select>
+      </ion-item>
+      
+      <button ion-button block (click)="updateCliente()" color="primary">Actualizar Cliente</button>
+  </ion-list>
+</ion-content>

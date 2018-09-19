@@ -1,0 +1,35 @@
+<!--
+  Generated template for the MarcaDetallePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.3
+
+  sendMarcas
+
+-->
+<ion-header>
+
+  <ion-navbar>
+      <ion-buttons left>
+          <button ion-button icon-only menuToggle="left">
+            <ion-icon name="menu"></ion-icon>
+          </button>
+        </ion-buttons>
+    <ion-title>marca-detalle</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-content>
+      <h1>Detalle de Marcas</h1>
+        <ion-list inset>
+          <ion-item *ngFor="let marca of marcas">
+            <h2><b>Id:</b> {{marca.Marcas_Id}}</h2>
+            <h2><b>Marca:</b> {{marca.Marca_Descripcion}}</h2>
+            <button ion-button color="secondary" (click)="sendMarcas(marca)">Actualizar</button>
+          </ion-item>
+        </ion-list>
+      </ion-content>
+</ion-content>

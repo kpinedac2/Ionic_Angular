@@ -1,0 +1,7 @@
+{
+  "name": "PuntoVenta",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

@@ -1,0 +1,54 @@
+<!--
+  Generated template for the CreateUsuarioPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+      <ion-buttons left>
+          <button ion-button icon-only menuToggle="left">
+            <ion-icon name="menu"></ion-icon>
+          </button>
+        </ion-buttons>
+    <ion-title>create-usuario</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <h1>Formulario de Creación de Usuario</h1>
+    <ion-list>
+        <ion-item>
+          <ion-label stacked><h1>Nombre de Usuario</h1></ion-label>
+          <ion-input type="text" placeholder="Ingrese el Nombre de Usuario" name="Usuario_Nombre" [(ngModel)]="usuario.Usuario_Nombre "></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label stacked><h1>Password</h1></ion-label>
+            <ion-input type="password" placeholder="Ingrese la Clave de Usuario" name="Usuario_Passsword " [(ngModel)]="usuario.Usuario_Passsword "></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label stacked><h1>Estado de Usuario</h1></ion-label>
+            <ion-select [(ngModel)]="usuario.Usuario_Estado">
+              <ion-option value="A">Activo</ion-option>
+              <ion-option value="I">Inactivo</ion-option>
+            </ion-select>
+        </ion-item>
+
+
+         <ion-item>
+            <ion-label stacked><h1>Empleado al que pertenece el usuario</h1></ion-label>
+            <ion-select [(ngModel)]="usuario.Usuario_Empleado ">
+              <ion-option *ngFor="let empleado of empleados"  value="{{empleado.Empleado_Id}}">{{empleado.Empleado_Nombre1}} {{empleado.Empleado_Apellido1}}</ion-option>
+            </ion-select>
+        </ion-item>
+  
+          
+          
+          <button ion-button block (click)="saveUsuario()" color="primary">Crear Usuario</button>
+      </ion-list>
+</ion-content>

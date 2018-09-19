@@ -1,0 +1,34 @@
+<!--
+  Generated template for the EmpleadosDetallePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-buttons left>
+        <button ion-button icon-only menuToggle="left">
+          <ion-icon name="menu"></ion-icon>
+        </button>
+      </ion-buttons>
+    <ion-title>Empleados/Detalle</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-content>
+        <ion-list inset>
+          <ion-item *ngFor="let empleado of empleados">
+            <h2><b>Id:</b> {{empleado.Empleado_Id}}</h2>
+            <p><b>Nombre1:</b> {{empleado.Empleado_Nombre1}}</p>
+            <p><b>Nombre2:</b> {{empleado.Empleado_Nombre2}}</p>
+            <p><b>Apellido1:</b> {{empleado.Empleado_Apellido1}}</p>
+            <p><b>Apellido2:</b> {{empleado.Empleado_Apellido2}}</p>
+            <button ion-button color="secondary" (click)="sendEmpleados(empleado)">Actualizar</button>
+          </ion-item>
+        </ion-list>
+      </ion-content>
+</ion-content>

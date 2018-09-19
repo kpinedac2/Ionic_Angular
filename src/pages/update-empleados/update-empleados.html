@@ -1,0 +1,79 @@
+<!--
+  Generated template for the UpdateEmpleadosPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+        <ion-buttons left>
+                <button ion-button icon-only menuToggle="left">
+                  <ion-icon name="menu"></ion-icon>
+                </button>
+              </ion-buttons>
+    <ion-title>update-empleados</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list>
+    <ion-item>
+      <ion-label stacked><h1>Empleado Nombre1</h1></ion-label>
+      <ion-input type="text" name="Empleado_Nombre1" [(ngModel)]="empleados.Empleado_Nombre1"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label stacked><h1>Empleado Nombre2</h1></ion-label>
+        <ion-input type="text" name="Empleado_Nombre2" [(ngModel)]="empleados.Empleado_Nombre2"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label stacked><h1>Empleado Nombre3</h1></ion-label>
+        <ion-input type="text" name="Empleado_Nombre3" [(ngModel)]="empleados.Empleado_Nombre3"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label stacked><h1>Empleado Apellido1</h1></ion-label>
+        <ion-input type="text" name="Empleado_Apellido1" [(ngModel)]="empleados.Empleado_Apellido1"></ion-input>
+      </ion-item>
+
+      <ion-item>
+          <ion-label stacked><h1>Empleado Apellido2</h1></ion-label>
+          <ion-input type="text" name="Empleado_Apellido2" [(ngModel)]="empleados.Empleado_Apellido2"></ion-input>
+      </ion-item>
+
+      <ion-item>
+          <ion-label stacked><h1>Empleado Apellido3</h1></ion-label>
+          <ion-input type="text" name="Empleado_Apellido3" [(ngModel)]="empleados.Empleado_Apellido3"></ion-input>
+      </ion-item>
+
+      <ion-item>
+          <ion-label stacked><h1>Empleado Nacimiento</h1></ion-label>
+          <ion-input type="date" name="Empleado_Nacimiento" [(ngModel)]="empleados.Empleado_Nacimiento"></ion-input>
+      </ion-item>
+
+      <ion-item>
+          <ion-label stacked><h1>Empleado Dirección</h1></ion-label>
+          <ion-input type="text" name="Empleado_Direccion" [(ngModel)]="empleados.Empleado_Direccion"></ion-input>
+      </ion-item>
+
+      <ion-item>
+          <ion-label stacked><h1>Empleado Telefono:</h1></ion-label>
+          <ion-input type="text" name="Empleado_Telefono" [(ngModel)]="empleados.Empleado_Telefono"></ion-input>
+      </ion-item>
+
+      <ion-item>
+          <ion-label><h1>Genero</h1></ion-label>
+          <ion-select [(ngModel)]="empleados.Empleado_Genero">
+            <ion-option value="F">Femenino</ion-option>
+            <ion-option value="M">Masculino</ion-option>
+          </ion-select>
+      </ion-item>
+      
+      <button ion-button block (click)="updateEmpleado()" color="primary">Crear Empleado</button>
+  </ion-list>
+</ion-content>

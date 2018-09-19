@@ -1,0 +1,31 @@
+<!--
+  Generated template for the UpdateTipoproductosPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+      <ion-buttons left>
+          <button ion-button icon-only menuToggle="left">
+            <ion-icon name="menu"></ion-icon>
+          </button>
+        </ion-buttons>
+    <ion-title>update-tipoproductos</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label stacked><h1>Ingrese un tipo o categoría de producto</h1></ion-label>
+      <ion-input type="text" name="TipoProducto_Descripcion" [(ngModel)]="tipoproductos.TipoProducto_Descripcion  "></ion-input>
+    </ion-item>
+      
+      
+      <button ion-button block (click)="updateTipoproducto()" color="primary">Crear Tipo Producto</button>
+  </ion-list>
+</ion-content>
